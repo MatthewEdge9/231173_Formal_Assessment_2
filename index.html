@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/index.js"></script>
+
+    <title>Formal Assessment Two: Class Two</title>
+  </head>
+
+  <body>
+
+    <div class="row">
+      <form class="col-6 form" id="bookingForm"> 
+        <h3>AutoWash: Schedule a Clean!</h3>
+        <input type="text" class="form-control" placeholder="Make of Car" id="make">
+        <input type="text" class="form-control" placeholder="Model of Car" id="model">
+        <strong><p>Cleaning Services:</p></strong>
+       
+        <div class="top-check">
+          <input class="form-check-input" name="services" type="checkbox" value="exterior" id="exterior" data-cost="50">
+          <label class="form-check-label" for="exterior">
+            Exterior Clean
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="services" type="checkbox" value="interior" id="interior" data-cost="60">
+          <label class="form-check-label" for="interior">
+            Interior Clean
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="services" type="checkbox" value="detail" id="detail" data-cost="45">
+          <label class="form-check-label" for="detail">
+            Interior Detail 
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="services" type="checkbox" value="engine" id="engine" data-cost="30">
+          <label class="form-check-label" for="engine">
+            Engine Degrease  
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="services" type="checkbox" value="polish" id="polish" data-cost="20">
+          <label class="form-check-label" for="polish">
+            Mag & Rim Polish 
+          </label>
+        </div>
+
+        <div class="top-check">
+          <input class="form-check-input" name="services" type="checkbox" value="deep" id="deep" data-cost="70">
+          <label class="form-check-label" for="deep">
+            Upholstery Deep Clean  
+          </label>
+        </div>
+        
+        <button class="btn btn-primary" type="button" onclick="addBooking(); displayBooking();">Add to Schedule</button>
+      </form>
+      
+      <div class="col-6 output">
+        <h3>Booking List</h3>
+        <div class="row">
+
+          <!-- This is the example element -->
+          <div class="col-6">
+            <div class="card" style="width: 100%;">
+              <div class="card-body" id="bookingCard">
+                <h5 class="card-title">Make & Model</h5>
+                <p>Cleaning Services: value</p>
+                <p id="bookingCost">Total Cost:</p>
+              </div>
+            </div>
+
+          </div>
+    
+        </div> 
+      </div>
+    </div>
+
+    
+    
+  </body>
+</html>
+
